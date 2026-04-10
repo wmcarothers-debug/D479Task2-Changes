@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodging - Taniti</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Taniti</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lodging.html" class="active">Lodging</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact & FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="card" style="margin-bottom: 2rem; text-align: center;">
+            <h2>Information about Lodging on Taniti</h2>
+            <p>Taniti has a wide variety of lodging that ranges from an inexpensive hostel to one large, four-star resort. There are many small, family-owned hotels and a growing number of bed and breakfasts. All types of lodging are strictly regulated and regularly inspected by the Tanitian government.</p>
+        </div>
+
+        <div class="split-layout">
+            <div class="col-50" style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="card lodging-card">
+                    <h3>Hostels</h3>
+                    <p>Perfect for solo travelers and those on a budget looking for a social atmosphere.</p>
+                    <a href="#" class="btn booking-trigger">Book a Hostel</a>
+                </div>
+                <div class="card lodging-card">
+                    <h3>Bed and Breakfasts</h3>
+                    <p>Experience authentic Tanitian hospitality with home-cooked meals.</p>
+                    <a href="#" class="btn booking-trigger">Book a B&B</a>
+                </div>
+            </div>
+
+            <div class="col-50" style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="card lodging-card">
+                    <h3>Resorts</h3>
+                    <p>Indulge in luxury with private beaches and world-class spa facilities.</p>
+                    <a href="#" class="btn booking-trigger">Book a Resort</a>
+                </div>
+                <div class="card lodging-card">
+                    <h3>Family Owned Hotels</h3>
+                    <p>Friendly service and central locations provided by our local business owners.</p>
+                    <a href="#" class="btn booking-trigger">Book a Hotel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bookingModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Booking System</h3>
+            <p>Thank you for your interest! Our online booking system is currently being updated to serve you better. Please contact our local office to finalize your reservation.</p>
+            <button class="btn-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        
+        const buttons = document.querySelectorAll('.booking-trigger');
+        const modal = document.getElementById('bookingModal');
+        buttons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                modal.style.display = 'flex'; 
+            });
+        });
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

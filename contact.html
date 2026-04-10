@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Taniti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Taniti</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lodging.html">Lodging</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html" class="active">Contact & FAQ</a></li>
+            </ul>
+        </nav>
+
+        <div class="split-layout">
+            <section class="col-50 card">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h4>Power & Electricity</h4>
+                    <p>Power outlets are 120 volts (the same as in the United States). </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Alcohol & Drinking Age</h4>
+                    <p>
+                        Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m. The drinking age on Taniti is 18 and the drinking age is not strictly enforced.
+                    </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Language & Communication</h4>
+                    <p>Many younger Tanitians speak fluent English. Very little English is spoken in rural areas, especially by the older residents.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Healthcare</h4>
+                    <p>There is one hospital and several clinics. The hospital has many multilingual employees.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Safety & Crime</h4>
+                    <p>Violent crime is very rare on Taniti, but as tourism increases, there are more reports of pickpocketing and other petty crimes. </p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>Currency & Banking</h4>
+                    <p>Taniti uses the U.S. dollar as its currency, but many businesses will also accept euros and yen. Several banks facilitate currency exchange, and many businesses accept major credit cards.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>National Holidays</h4>
+                    <p>Taniti enjoys a large number of national holidays, and many tourist attractions and restaurants will be closed on holidays, so visitors should plan accordingly.</p>
+                </div>
+            </section>
+
+            <section class="col-50 card">
+                <h2>Contact Us</h2>
+                <form class="contact-form" id="tanitiContactForm">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="How can we help?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </div>
+
+    <div id="contactModal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Message Sent!</h3>
+            <p>Thank you for reaching out to us. A Tanitian representative will get back to you within 24–48 hours.</p>
+            <button class="btn-close" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const contactForm = document.getElementById('tanitiContactForm');
+        const modal = document.getElementById('contactModal');
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            modal.style.display = 'flex';
+            contactForm.reset();
+        });
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>

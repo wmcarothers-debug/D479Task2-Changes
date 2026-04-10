@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodging - Taniti</title>
+    <style>
+        /* Shared Styles from Home Page */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #005f73;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            background-color: #0a9396;
+            padding: 1rem 0;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+
+                nav ul li a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                    transition: 0.3s;
+                }
+
+                    nav ul li a:hover {
+                        color: #e9d8a6;
+                    }
+
+        /* Lodging Specific Styles */
+        .intro-section {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+            .intro-section h2 {
+                color: #005f73;
+                margin-bottom: 10px;
+            }
+
+        .split-layout {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 4rem;
+        }
+
+        /* Two columns */
+        .left-column, .right-column {
+            flex: 1; /* Equal split for better readability of text cards */
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .lodging-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #0a9396;
+        }
+
+            .lodging-card h3 {
+                color: #005f73;
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .lodging-card p {
+                margin-bottom: 1.5rem;
+                color: #555;
+            }
+
+        /* Booking Button */
+        .book-btn {
+            display: inline-block;
+            background-color: #ee9b00;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+            .book-btn:hover {
+                background-color: #ca6702;
+            }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .split-layout {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Welcome to Taniti</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Lodging</a></li>
+                <li><a href="#">Transportation</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Activities</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section class="intro-section">
+            <h2>Information about Lodging on Taniti</h2>
+            <p>Whether you are looking for a high-end luxury experience or a budget-friendly social atmosphere, Taniti offers a wide range of accommodations to suit every traveler's needs.</p>
+        </section>
+
+        <div class="split-layout">
+
+            <div class="left-column">
+                <div class="lodging-card">
+                    <h3>Hostels</h3>
+                    <p>Perfect for solo travelers and those on a budget. Our hostels are located near the city center, offering vibrant social lounges and shared kitchen facilities.</p>
+                    <a href="#" class="book-btn">Book a Hostel</a>
+                </div>
+
+                <div class="lodging-card">
+                    <h3>Bed and Breakfasts</h3>
+                    <p>Experience authentic Tanitian hospitality. Our B&Bs are often situated in quiet neighborhoods, offering home-cooked meals and a cozy, personal atmosphere.</p>
+                    <a href="#" class="book-btn">Book a B&B</a>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="lodging-card">
+                    <h3>Resorts</h3>
+                    <p>Indulge in luxury with our ocean-front resorts. Featuring private beaches, world-class spas, and all-inclusive dining options for the ultimate relaxation.</p>
+                    <a href="#" class="book-btn">Book a Resort</a>
+                </div>
+
+                <div class="lodging-card">
+                    <h3>Family Owned Hotels</h3>
+                    <p>Support local businesses while enjoying a comfortable stay. These hotels offer great value and are known for their friendly service and central locations.</p>
+                    <a href="#" class="book-btn">Book a Hotel</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
